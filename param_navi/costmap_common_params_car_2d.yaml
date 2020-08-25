@@ -24,6 +24,7 @@ observation_sources: scan
 scan: {sensor_frame: /laser, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
 
 
+
 global_frame: map
 robot_base_frame: base_link
 
