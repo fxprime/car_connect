@@ -83,4 +83,30 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.2)
 -- TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 10.
 -- TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight = 1e-1
 
+
+ 
+TRAJECTORY_BUILDER_2D.min_range = 0.25
+TRAJECTORY_BUILDER_2D.max_range =8
+
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching =true
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.25
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-1 -- 1e-1
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight = 1e-1   --1e-1
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(20.)
+
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight=10   -- 10
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 4e1    --40
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads=4
+
+
+TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds=30/TRAJECTORY_BUILDER_2D.submaps.num_range_data
+TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters=2/TRAJECTORY_BUILDER_2D.submaps.num_range_data
+TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians=math.rad(90/TRAJECTORY_BUILDER_2D.submaps.num_range_data/POSE_GRAPH.optimize_every_n_nodes)
+
+
+POSE_GRAPH.optimize_every_n_nodes = 10
+POSE_GRAPH.constraint_builder.min_score = 0.8
+
+
+
 return options
