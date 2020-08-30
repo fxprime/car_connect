@@ -1,0 +1,25 @@
+<launch>
+
+
+
+
+    <!-- launch\-prefix="gdb \-ex run \-\-args\" -->
+
+
+ 
+
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" launch-prefix="gnome-terminal --command"    /> 
+    <include file="$(find rs_r200)/launch/withparams.launch" launch-prefix="gnome-terminal --command"    /> 
+    <include file="$(find zbar_ros)/launch/example.launch" launch-prefix="gnome-terminal --command"    /> 
+
+    <node name="car_connect"        pkg="car_connect"       type="car_connect"      output="screen" launch-prefix="gnome-terminal --command"   
+      /> 
+
+    <node name="car_payload" pkg="car_payload" type="car_payload" output="screen" launch-prefix="gnome-terminal --command" />
+
+    <node name="car_connect"   pkg="car_connect"  type="carto_init.py" output="screen"   launch-prefix="gnome-terminal --command" 
+      /> 
+
+
+
+</launch>
