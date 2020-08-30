@@ -8,9 +8,9 @@
 
  
 
-    <include file="$(find rplidar_ros)/launch/rplidar.launch" launch-prefix="gnome-terminal --command"    /> 
-    <include file="$(find rs_r200)/launch/withparams.launch" launch-prefix="gnome-terminal --command"    /> 
-    <include file="$(find zbar_ros)/launch/example.launch" launch-prefix="gnome-terminal --command"    /> 
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"    /> 
+    <include file="$(find rs_r200)/launch/withparams.launch"    /> 
+    <include file="$(find zbar_ros)/launch/example.launch"    /> 
 
     <node name="car_connect"        pkg="car_connect"       type="car_connect"      output="screen" launch-prefix="gnome-terminal --command"   
       /> 
