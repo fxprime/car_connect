@@ -12,12 +12,12 @@
     <include file="$(find rs_r200)/launch/withparams.launch"    /> 
     <include file="$(find zbar_ros)/launch/example.launch"    /> 
 
-    <node name="car_connect"        pkg="car_connect"       type="car_connect"      output="screen" launch-prefix="gnome-terminal --command"   
+    <node name="car_connect"        pkg="car_connect"       type="car_connect"      output="screen" launch-prefix="xterm -e"   
       /> 
 
-    <node name="car_payload" pkg="car_payload" type="car_payload" output="screen" launch-prefix="gnome-terminal --command" />
+    <node name="car_payload" pkg="car_payload" type="car_payload" output="screen" launch-prefix="xterm -e" />
 
-    <node name="carto_init"   pkg="car_connect"  type="carto_init.py" output="screen"   launch-prefix="gnome-terminal --command" 
+    <node name="carto_init"   pkg="car_connect"  type="carto_init.py" output="screen"   launch-prefix="xterm -e" 
       /> 
 
 
