@@ -17,7 +17,7 @@
 
     <node name="car_payload" pkg="car_payload" type="car_payload" output="screen" launch-prefix="gnome-terminal --command" />
 
-    <node name="car_connect"   pkg="car_connect"  type="carto_init.py" output="screen"   launch-prefix="gnome-terminal --command" 
+    <node name="carto_init"   pkg="car_connect"  type="carto_init.py" output="screen"   launch-prefix="gnome-terminal --command" 
       /> 
 
 
