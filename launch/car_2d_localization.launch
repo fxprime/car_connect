@@ -16,6 +16,8 @@
 
 <launch>
   <param name="/use_sim_time" value="false" />
+  <param name="/cartoMode" type="str" value="localize" />
+  <param name="/cartoMap" type="str" value="$(arg load_state_filename)" />
 
   <param name="robot_description"
     textfile="$(find car_connect)/urdf/car_2d.urdf" />
