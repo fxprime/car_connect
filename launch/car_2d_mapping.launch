@@ -18,6 +18,8 @@
   <param name="robot_description"
     textfile="$(find car_connect)/urdf/car_2d.urdf" />
 
+  <param name="/cartoMode" type="str" value="mapping" />
+  
   <node name="robot_state_publisher" pkg="robot_state_publisher"
     type="robot_state_publisher" />
 
